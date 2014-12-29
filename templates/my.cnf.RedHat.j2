@@ -34,6 +34,7 @@ binlog_ignore_db={{ i.name }}
 {% endfor %}
 {% endif %}
 
-[mysqld_safe]
-log-error=/var/log/mysqld.log
-pid-file=/var/run/mysqld/mysqld.pid
+# is default anyway, and breaks rhel 7 (maria db), look in /var/log/mariadb
+#[mysqld_safe]
+#log-error=/var/log/mysqld.log
+#pid-file=/var/run/mysqld/mysqld.pid
